@@ -1,0 +1,41 @@
+---
+title: 'Course Project: Shiny Application and Reproducible Pitch'
+author: "Omero Catan"
+date: "September 6, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## CO2 Dataset
+
+This peer assessed assignment has two parts. First, you will create a Shiny application and deploy it on Rstudio's servers. Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+The CO2 r dataset was used for the application and presentation.
+
+## Carbon Dioxide Uptake in Grass Plants
+
+### **Source**
+Potvin, C., Lechowicz, M. J. and Tardif, S. (1990) “The statistical analysis of ecophysiological response curves obtained from experiments involving repeated measures”, Ecology, 71, 1389–1400.
+Pinheiro, J. C. and Bates, D. M. (2000) Mixed-effects Models in S and S-PLUS, Springer.
+
+The data frame has 84 rows and 5 columns of data from an experiment on the coold tolerance of the grass species Enchinochloa crus-galli.
+
+## Variables
+
+### **Variables**
+- Plant: An ordered Factor with levels Qn1 < Qn2 < Qn3<…..<Mc1 giving a unique     identifier for each plant.
+- Type: A factor with levels Quebec Mississippi giving the origin of the plant.
+- Treatment: A factor with levels nonchilled, chilled.
+- conc: A numeric vector of ambient carbon dioxide concentrations (mL/L).
+- uptake: A numeric vector of carbon dioxide uptake rates (umol/m^2 sec).
+
+## Application Calculation
+My application uses the CO2 dataset in R and based on the user input of a variable from the drop-down list, calculates boxplots comparing the selected variable to the CO2 uptake levels.
+
+### **Top of Dataset**
+```{r}
+head(CO2)
+```
